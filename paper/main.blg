@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: abbrvnat.bst
+Database file #1: references.bib
+Warning--empty year in paquet_towards_nodate
+You've used 20 entries,
+            2773 wiz_defined-function locations,
+            731 strings with 9506 characters,
+and the built_in function-call counts, 10421 in all, are:
+= -- 980
+> -- 600
+< -- 17
++ -- 202
+- -- 182
+* -- 821
+:= -- 1591
+add.period$ -- 88
+call.type$ -- 20
+change.case$ -- 121
+chr.to.int$ -- 20
+cite$ -- 41
+duplicate$ -- 465
+empty$ -- 795
+format.name$ -- 212
+if$ -- 2226
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 14
+newline$ -- 132
+num.names$ -- 84
+pop$ -- 229
+preamble$ -- 1
+purify$ -- 98
+quote$ -- 0
+skip$ -- 386
+stack$ -- 0
+substring$ -- 370
+swap$ -- 94
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 220
+warning$ -- 1
+while$ -- 90
+width$ -- 0
+write$ -- 312
+(There was 1 warning)

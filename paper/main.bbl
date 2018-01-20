@@ -1,0 +1,172 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bauer et~al.(2016)Bauer, van~der Wilk, and
+  Rasmussen]{bauer_understanding_2016}
+M.~S. Bauer, M.~van~der Wilk, and C.~E. Rasmussen.
+\newblock Understanding {Probabilistic} {Sparse} {Gaussian} {Process}
+  {Approximations}.
+\newblock \emph{arXiv:1606.04820 [stat]}, June 2016.
+\newblock URL \url{http://arxiv.org/abs/1606.04820}.
+\newblock arXiv: 1606.04820.
+
+\bibitem[Bui et~al.(2017)Bui, Yan, and Turner]{bui_unifying_2017}
+T.~D. Bui, J.~Yan, and R.~E. Turner.
+\newblock A {Unifying} {Framework} for {Gaussian} {Process} {Pseudo}-{Point}
+  {Approximations} using {Power} {Expectation} {Propagation}.
+\newblock \emph{Journal of Machine Learning Research}, 18\penalty0
+  (104):\penalty0 1--72, 2017.
+\newblock URL \url{http://jmlr.org/papers/v18/16-603.html}.
+
+\bibitem[Csató and Opper(2002)]{csato_sparse_2002}
+L.~Csató and M.~Opper.
+\newblock Sparse {On}-{Line} {Gaussian} {Processes}.
+\newblock \emph{Neural Computation}, 14\penalty0 (3):\penalty0 641--668, Mar.
+  2002.
+\newblock ISSN 0899-7667.
+\newblock \doi{10.1162/089976602317250933}.
+\newblock URL \url{https://doi.org/10.1162/089976602317250933}.
+
+\bibitem[Cunningham(2015)]{cunningham_expectation_2015}
+J.~P. Cunningham.
+\newblock Expectation {Propagation}: {Factorization} and {Entropy}
+  {Approximation}, May 2015.
+\newblock URL \url{http://gpss.cc/gpa15/assets/cunningham.pdf}.
+
+\bibitem[Cunningham et~al.(2011)Cunningham, Hennig, and
+  Lacoste-Julien]{cunningham_gaussian_2011}
+J.~P. Cunningham, P.~Hennig, and S.~Lacoste-Julien.
+\newblock Gaussian {Probabilities} and {Expectation} {Propagation}.
+\newblock \emph{arXiv:1111.6832 [stat]}, Nov. 2011.
+\newblock URL \url{http://arxiv.org/abs/1111.6832}.
+\newblock arXiv: 1111.6832.
+
+\bibitem[Dehaene and Barthelmé(2015)]{dehaene_bounding_2015}
+G.~P. Dehaene and S.~Barthelmé.
+\newblock Bounding errors of {Expectation}-{Propagation}.
+\newblock In C.~Cortes, N.~D. Lawrence, D.~D. Lee, M.~Sugiyama, and R.~Garnett,
+  editors, \emph{Advances in {Neural} {Information} {Processing} {Systems} 28},
+  pages 244--252. Curran Associates, Inc., 2015.
+\newblock URL
+  \url{http://papers.nips.cc/paper/5912-bounding-errors-of-expectation-propagation.pdf}.
+
+\bibitem[Gelman et~al.(2014)Gelman, Vehtari, Jylänki, Sivula, Tran, Sahai,
+  Blomstedt, Cunningham, Schiminovich, and Robert]{gelman_expectation_2014}
+A.~Gelman, A.~Vehtari, P.~Jylänki, T.~Sivula, D.~Tran, S.~Sahai, P.~Blomstedt,
+  J.~P. Cunningham, D.~Schiminovich, and C.~Robert.
+\newblock Expectation propagation as a way of life: {A} framework for
+  {Bayesian} inference on partitioned data.
+\newblock \emph{arXiv:1412.4869 [stat]}, Dec. 2014.
+\newblock URL \url{http://arxiv.org/abs/1412.4869}.
+\newblock arXiv: 1412.4869.
+
+\bibitem[Herbrich et~al.(2007)Herbrich, Minka, and
+  Graepel]{herbrich_trueskill_2007}
+R.~Herbrich, T.~Minka, and T.~Graepel.
+\newblock {TrueSkill}™ : {A} {Bayesian} {Skill} {Rating} {System}.
+\newblock In P.~B. Schölkopf, J.~C. Platt, and T.~Hoffman, editors,
+  \emph{Advances in {Neural} {Information} {Processing} {Systems} 19}, pages
+  569--576. MIT Press, 2007.
+\newblock URL
+  \url{http://papers.nips.cc/paper/3079-trueskilltm-a-bayesian-skill-rating-system.pdf}.
+
+\bibitem[Kuss and Rasmussen(2005)]{kuss_assessing_2005}
+M.~Kuss and C.~E. Rasmussen.
+\newblock Assessing approximate inference for binary {Gaussian} process
+  classification.
+\newblock \emph{Journal of machine learning research}, 6\penalty0
+  (Oct):\penalty0 1679--1704, 2005.
+\newblock URL \url{http://www.jmlr.org/papers/v6/kuss05a.html}.
+
+\bibitem[Li et~al.(2015)Li, Hern\'{a}ndez-Lobato, and
+  Turner]{li_stochastic_2015}
+Y.~Li, J.~M. Hern\'{a}ndez-Lobato, and R.~E. Turner.
+\newblock Stochastic expectation propagation.
+\newblock In \emph{Advances in Neural Information Processing Systems 28}, pages
+  2323--2331. Curran Associates, Inc., 2015.
+\newblock URL
+  \url{http://papers.nips.cc/paper/5760-stochastic-expectation-propagation.pdf}.
+
+\bibitem[Minka(2001)]{minka_expectation_2001}
+T.~Minka.
+\newblock Expectation propagation for approximate {Bayesian} inference.
+\newblock In \emph{Proceedings of the {Seventeenth} conference on {Uncertainty}
+  in artificial intelligence}, pages 362--369. Morgan Kaufmann Publishers Inc.,
+  2001.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=2074067}.
+
+\bibitem[Minka(2004)]{minka_power_2004}
+T.~Minka.
+\newblock Power ep.
+\newblock Technical report, Technical report, Microsoft Research, Cambridge,
+  2004.
+\newblock URL
+  \url{https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2004-149.pdf}.
+
+\bibitem[Minka(2005)]{minka_divergence_2005}
+T.~Minka.
+\newblock Divergence measures and message passing.
+\newblock Technical report, Technical report, Microsoft Research, 2005.
+\newblock URL
+  \url{https://www.seas.harvard.edu/courses/cs281/papers/minka-divergence.pdf}.
+
+\bibitem[Minka et~al.(2014)Minka, Winn, Guiver, Webster, Zaykov, Yangel,
+  Spengler, and Bronskill]{InferNET14}
+T.~Minka, J.~Winn, J.~Guiver, S.~Webster, Y.~Zaykov, B.~Yangel, A.~Spengler,
+  and J.~Bronskill.
+\newblock {Infer.NET 2.6}, 2014.
+\newblock Microsoft Research Cambridge. http://research.microsoft.com/infernet.
+
+\bibitem[Opper et~al.(2016)Opper, Çakmak, and Winther]{opper_theory_2016}
+M.~Opper, B.~Çakmak, and O.~Winther.
+\newblock A {Theory} of {Solving} {TAP} {Equations} for {Ising} {Models} with
+  {General} {Invariant} {Random} {Matrices}.
+\newblock \emph{Journal of Physics A: Mathematical and Theoretical},
+  49\penalty0 (11):\penalty0 114002, Mar. 2016.
+\newblock ISSN 1751-8113, 1751-8121.
+\newblock \doi{10.1088/1751-8113/49/11/114002}.
+\newblock URL \url{http://arxiv.org/abs/1509.01229}.
+\newblock arXiv: 1509.01229.
+
+\bibitem[Paquet et~al.()Paquet, Weller, Winther, and
+  Ruozzi]{paquet_towards_nodate}
+U.~Paquet, A.~Weller, O.~Winther, and N.~Ruozzi.
+\newblock Towards (?) marginal likelihood lower bounds with {EP}.
+\newblock URL \url{http://gpss.cc/gpa15/assets/paquet.pdf}.
+
+\bibitem[Swaroop(2017)]{swaroop_understanding_2017}
+S.~Swaroop.
+\newblock Understanding {Expectation} {Propagation}.
+\newblock Technical report, University of Cambridge, May 2017.
+\newblock URL
+  \url{https://github.com/siddharthswaroop/masters-project/blob/master/Swaroop%202017.pdf}.
+
+\bibitem[Turner and Sahani(2011)]{turner_two_2011}
+R.~E. Turner and M.~Sahani.
+\newblock Two problems with variational expectation maximisation for
+  time-series models.
+\newblock \emph{Bayesian Time series models}, pages 115--138, 2011.
+
+\bibitem[Weller and Jebara(2014)]{weller_clamping_2014}
+A.~Weller and T.~Jebara.
+\newblock Clamping variables and approximate inference.
+\newblock In \emph{Advances in {Neural} {Information} {Processing} {Systems}},
+  pages 909--917, 2014.
+\newblock URL
+  \url{http://papers.nips.cc/paper/5529-clamping-variables-and-approximate-inference}.
+
+\bibitem[Willsky et~al.(2008)Willsky, Sudderth, and
+  Wainwright]{willsky_loop_2008}
+A.~S. Willsky, E.~B. Sudderth, and M.~J. Wainwright.
+\newblock Loop series and {Bethe} variational bounds in attractive graphical
+  models.
+\newblock In \emph{Advances in neural information processing systems}, pages
+  1425--1432, 2008.
+\newblock URL
+  \url{http://papers.nips.cc/paper/3354-loop-series-and-bethe-variational-bounds-in-attractive-graphical-models}.
+
+\end{thebibliography}

@@ -13,6 +13,11 @@ class Document:
         return
 
     def _cleanInput(self):
+        # Remove comments, citations, maketitle and appendices
+        return
+
+    def _extractMetaData(selfSelf):
+        # Title, author and preamble
         return
 
 class Section:
