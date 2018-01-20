@@ -1,31 +1,13 @@
 # This file is the main one...
 
+<<<<<<< HEAD
+=======
+from doc_parse import *
+
+print("goodbye")
+
+>>>>>>> 1d1c316d23bd226d0ccc93b44d07533c9fb39b18
 # Read in the latex file and parse it
+src = "paper/main.tex"
 
-class document:
-    def __init__(self):
-        self.sections = []
-        self.graphics = []
-        self.preamble = ""
-        return
-
-class section:
-    def __init__(self):
-        self.subsections = []
-        self.content = ""
-        return
-
-class subsection:
-    def __init__(self):
-        self.subsubsections = []
-        self.content = ""
-
-class subsubsection:
-    def __init__(self):
-        self.content = ""
-
-class graphic:
-    def __init__(self):
-        self.content = ""
-
-
+doc = Document(src)
