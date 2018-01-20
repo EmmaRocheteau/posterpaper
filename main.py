@@ -6,3 +6,4 @@ from doc_parse import *
 src = "paper2/2015mt-its.tex"
 
 doc = Document(src)
+i = 1
