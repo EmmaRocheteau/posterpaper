@@ -1,0 +1,22 @@
+	}
+}
+%%% Logo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+% The logos are compressed a bit into a simple box to make them smaller on the result
+% (Wasn't able to find any bigger of them.)
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0pt}
+	\fbox{
+		\begin{minipage}{16em}  %distanza dal bordo destro
+			\hspace*{2cm}\\ %\includegraphics[scale=0.11]{unict.pdf} \\
+		  \hfill \\
+		  %\vspace*{-0.6cm}
+		  	\includegraphics[width=16.1em,height=4.95em]{chu-logo.jpg} \\[7ex]
+		  	%\includegraphics[width=12em,height=0em]{whitespace.png} \\
+			\includegraphics[width=16em,height=3.38em]{UniversityofCambridgeLogo.png}\\[7ex]
+            \includegraphics[width=16em,height=1.49em]{Complab.png} \\
+			%\includegraphics[width=10em,height=4em]{dynanets_logo}
+			%\includegraphics[width=4em,height=4em]{aitia_logo}
+		\end{minipage}
+	}
+}
