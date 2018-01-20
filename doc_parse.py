@@ -10,11 +10,31 @@ class Document:
         self.abstract = ""
         self._cleanInput()
         self._extractMetaData()
+        self._extractAbstract()
+        self._parseSource()
         return
 
     def _parseSource(self):
-        # Get the sections and subsections and subsubsections and the graphics
-        
+        # Break up the document into raw sections
+        fin = open("clean.txt", "r")
+        line = fin.readline()
+        while line.startswith("\\end{document}") is False:
+            if line.startswith("\section"):
+                sec = Section()
+                # Get the name of the section
+                start = line.find("{")
+                end = line.find("}", start)
+                sec.name = line[start+1:end]
+                line =  fin.readline()
+                while line.startswith("\section") is False and line.startswith("\\end{document}") is False:
+                    # While we are in this same section
+                    if line.startswith("\\bibliography") is False:
+                        sec.raw += line
+                    line = fin.readline()
+                self.sections.append(sec)
+                print(sec.raw)
+            else:
+                line = fin.readline()
         return
 
     def _cleanInput(self):
@@ -58,11 +78,29 @@ class Document:
         print(self.preamble)
         return
 
+    def _extractAbstract(self):
+        fin = open("clean.txt", "r")
+        abstract_found = False
+        for line in fin:
+            if line.startswith("\\begin{abstract}"):
+                abstract_found = True
+                continue
+            if abstract_found is True:
+                if line.startswith("\\end{abstract}"):
+                    abstract_found = False
+                    continue
+                else:
+                    self.abstract += line
+        fin.close()
+        print(self.abstract)
+        return
+
 class Section:
     def __init__(self):
         self.subsections = []
         self.content = ""
         self.name = ""
+        self.raw = ""
         return
 
 class Subsection:
@@ -70,6 +108,7 @@ class Subsection:
         self.subsubsections = []
         self.content = ""
         self.name = ""
+        self.raw = ""
 
 class Subsubsection:
     def __init__(self):
