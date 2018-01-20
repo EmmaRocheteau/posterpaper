@@ -2,9 +2,7 @@
 
 from doc_parse import *
 
-print("goodbye")
-
 # Read in the latex file and parse it
-src = "paper/main.tex"
+src = "paper2/2015mt-its.tex"
 
 doc = Document(src)
