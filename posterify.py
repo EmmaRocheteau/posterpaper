@@ -31,9 +31,6 @@ f.write(h.read())
 #Add the headerbox tex stuff
 f.write("\headerbox{Abstract}{name=abstract,span=1,column=0,row=0}\n{")
 
-#Summarise the abstract to a given percentage of the length of the original text
-f.write(summarise(abstract, title, 60))
-
 #Code to decide how many sections to include and how to arrange them
 #For sections other than the abstract and last section
 #If section is less than 10% of the total content get rid of it from the section list
@@ -45,23 +42,21 @@ abstract_100 = client.Summarize({'title': 'Abstract', 'text': doc.abstract, 'sen
 f.write("}\n\n\headerbox{Abstract}{name=section0,span=1,column=0,row=0}\n{")
 f.write(abstract_100)
 
-#create variable called aspect which equals the height of the columns with respect to the width
+#Create variable called aspect which equals the height of the columns with respect to the width
 
-#calculate total number of characters in the whole document
-total_char_count = sum(section.char_count for section in doc.sections)
+#Work out what the reduced approximate character count would be if the sections were kept
+for i in range(len(doc.sections)):
+    ratio = doc.sections[i].char_count / doc.total_char_count
+    if ratio < 0.1 and i !=number_of_sections: #We always want to keep the conclusion otherwise the poster appears unfinished!
+        doc.sections[i].include = False #The default flag is True
 
-number_of_sections = len(doc.sections)
+#Calculate an approximation for the reduced_char_counts after summarising
+new_total_char_count = sum(section.char_count for section in doc.sections if section.include is True)
 
-for i in range(number_of_sections-1): #for all sections omitting the last section (we always want to keep the conclusion)
-    ratio = doc.sections[i].char_count/total_char_count
-    if ratio > 0.1:
-        doc.sections[i].reduced_char_count = ratio*4000
-    else:
-        del doc.sections[i]
+#Calculate estimates on new character counts
+section.reduced_char_count = section.char_count/new_total_char_count for section in doc.sections if section.include is True
 
-doc[-1].reduced_char_count
-
-    #Work out an amount of space relative to the abstract + it's image space
+#Work out an amount of space relative to the abstract + it's image space
 
 
 for i in range(len(doc.sections)):
