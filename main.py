@@ -1,7 +1,5 @@
 # This file is the main one...
 
-print("goodbye")
-
 # Read in the latex file and parse it
 
 class document:
