@@ -1,3 +1,5 @@
+from PIL import Image
+
 # Class definitions for the document model. The document class must be article
 class Document:
     def __init__(self, src):
@@ -16,8 +18,11 @@ class Document:
             for subsec in sec.subsections:
                 subsec.parse()
                 for fig in subsec.figures:
+                    fig.parse()
                     sec.figures.append(fig)
                 subsec.figures = []
+            sec.count_chars()
+        self.total_char_count = sum(sec.char_count for sec in self.sections)
         return
 
     def _parseSource(self):
@@ -78,9 +83,6 @@ class Document:
             if line.startswith("\\author"):
                 self.author += line
         fin.close()
-        print(self.title)
-        print(self.author)
-        print(self.preamble)
         return
 
     def _extractAbstract(self):
@@ -97,7 +99,6 @@ class Document:
                 else:
                     self.abstract += line
         fin.close()
-        print(self.abstract)
         return
 
 class Section:
@@ -109,6 +110,7 @@ class Section:
         self.raw = ""
         self.char_count = 0
         self.reduced_char_count = 0
+        self.include = True
         return
 
     def parse(self):
@@ -145,6 +147,12 @@ class Section:
                 # Some other \ like \item or whatever. Just copy them in...
                 self.content += lines[i]
                 i += 1
+        return
+
+    def count_chars(self):
+        self.char_count += len(self.content)
+        for subsec in self.subsections:
+            self.char_count += len(subsec.content)
         return
 
 class Subsection:
@@ -192,8 +200,27 @@ class Figure:
         self.caption = ""
         self.label = ""
         self.height = 1     # Multiples of width e.g. 0.5 => half as high as it is wide
+        self.include = True
         return
 
     def parse(self):
-
+        lines = self.content.split("\n")
+        for line in lines:
+            if line.startswith("\\includegraphics"):
+                start = line.find("{")
+                end = line.find("}", start)
+                self.image_path = line[start+1:end]
+            elif line.startswith("\\caption"):
+                start = line.find("{")
+                end = line.find("}", start)
+                self.caption = line[start + 1:end]
+            elif line.startswith("\\label"):
+                start = line.find("{")
+                end = line.find("}", start)
+                self.label = line[start + 1:end]
+            else:
+                continue
+        im = Image.open("paper2/imgs/" + self.image_path)
+        w, h = im.size  # (width,height) tuple
+        self.height = h/w
         return
