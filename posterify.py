@@ -36,13 +36,32 @@ f.write(summarise(abstract, title, 60))
 
 #Code to decide how many sections to include and how to arrange them
 #For sections other than the abstract and last section
-#If section is less than 10% of the total content get rid of it
-#Ideal poster length: 700 words or 4750 characters, ideal length for abstract 100 words or 670 characters. Shorten the other sections by 4750/totalchar_count
+#If section is less than 10% of the total content get rid of it from the section list
+#Ideal poster length: 700 words or ~4750 characters (lets say 4000 minus the abstract), ideal length for abstract 100 words/750 characters/6 sentences. Shorten the other sections by a factor of totalchar_count/4000
 #Calculate what the section length would be with and without it's figure. If number of images is 4 or less, keep all images. Try all combinations untill best is found
 #If number of images is more than 4 then try different combinations
-abstract_100 = summarise(abstract, title, abstract.)
 
+abstract_100 = client.Summarize({'title': 'Abstract', 'text': doc.abstract, 'sentences_number': 6})
+f.write("}\n\n\headerbox{Abstract}{name=section0,span=1,column=0,row=0}\n{")
+f.write(abstract_100)
 
+#create variable called aspect which equals the height of the columns with respect to the width
+
+#calculate total number of characters in the whole document
+total_char_count = sum(section.char_count for section in doc.sections)
+
+number_of_sections = len(doc.sections)
+
+for i in range(number_of_sections-1): #for all sections omitting the last section (we always want to keep the conclusion)
+    ratio = doc.sections[i].char_count/total_char_count
+    if ratio > 0.1:
+        doc.sections[i].reduced_char_count = ratio*4000
+    else:
+        del doc.sections[i]
+
+doc[-1].reduced_char_count
+
+    #Work out an amount of space relative to the abstract + it's image space
 
 
 for i in range(len(doc.sections)):
