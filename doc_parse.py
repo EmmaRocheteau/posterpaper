@@ -224,15 +224,15 @@ class Figure:
             if line.startswith("\\includegraphics"):
                 start = line.find("{")
                 end = line.find("}", start)
-                self.image_path = line[start+1:end]
+                self.image_path += line[start+1:end]
             elif line.startswith("\\caption"):
                 start = line.find("{")
                 end = line.find("}", start)
-                self.caption = line[start + 1:end]
+                self.caption += line[start + 1:end]
             elif line.startswith("\\label"):
                 start = line.find("{")
                 end = line.find("}", start)
-                self.label = line[start + 1:end]
+                self.label += line[start + 1:end]
             else:
                 continue
         im = Image.open("paper2/imgs/" + self.image_path)
