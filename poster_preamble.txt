@@ -93,7 +93,7 @@
 }
 %%% Eye Catcher %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-	\includegraphics[width=16em,height=9.18em]{eyecatcher.png}
+	\includegraphics[width=16em,height=9.18em]{eyecatcher.jpg}
 }
 %%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {\sf\bf
