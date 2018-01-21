@@ -21,7 +21,9 @@ class Poster:
         for i, section in enumerate(doc.sections):
             if section.include is True:
                 box = Box(doc)
-                box.figures = section.figures
+                for figure in section.figures:
+                    if figure.include is True:
+                        box.figures.append(figure)
                 box.content = section.content
                 for subsection in section.subsections:
                     box.content += subsection.content
