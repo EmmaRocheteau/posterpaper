@@ -47,7 +47,7 @@ def generate_latex(poster, filepath):
 
             # Add images to the section
             for figure in poster.columns[i].boxes[j].figures:
-                f.write("\n\\begin{center}\n\\includegraphics[width = 0.9\\linewidth]{")
+                f.write("\n\\begin{center}\n\\includegraphics[width = 0.6\\linewidth]{")
                 f.write(figure.image_path)
                 f.write("}\n\\begin{minipage}{1\\linewidth}\n\\textbf{Figure ??:}")
                 f.write(figure.caption)

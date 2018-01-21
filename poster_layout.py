@@ -50,7 +50,21 @@ class Poster:
         for box in self.boxes:
             box.sizeOfText(self.total_char_count, self.text_space)
             box.totalSize()
+        # hack
+        self.columns[0].boxes.append(self.boxes[0])
+        self.columns[0].boxes.append(self.boxes[1])
+        self.columns[0].boxes.append(self.boxes[2])
+        self.columns[1].boxes.append(self.boxes[3])
+        self.columns[2].boxes.append(self.boxes[4])
+        self.columns[2].boxes.append(self.boxes[5])
 
+        for i, col in enumerate(self.columns):
+            for box in col.boxes:
+                self.columns[i].column_size += box.total_size
+
+
+
+        """
         #Add correct number of boxes to first column
         count = 0
         size_one_before = 0
@@ -74,7 +88,7 @@ class Poster:
         box_number = self.columns[0].number_of_boxes
         count = 0
         size_one_before = 0
-        while self.columns[1].cumulative_size < 400:
+        while self.columns[1].cumulative_size < 350:
             size_one_before = self.columns[1].cumulative_size
             self.columns[1].cumulative_size += self.boxes[box_number].total_size
             count += 1
@@ -121,6 +135,7 @@ class Poster:
         self.columns[1].number_of_boxes = len(self.columns[2].boxes)
         
         '''
+        """
         return
 
 

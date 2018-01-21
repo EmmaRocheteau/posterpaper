@@ -109,7 +109,7 @@ However, while studying a specific domain or problem, analysing a problem throug
 
 To date, there are not many solutions for traffic that make full use of the intelligent agent concept. However, the multi-agent system metaphor has become recognised as a convenient approach for modelling and simulating complex systems~\cite{moya2007towards}. Also, it has grown enormously not only for being applied to traffic but also to transportation in general terms~\cite{bazzan2013review}.
 
-With the recent evolutions in Cloud Computing and Software-as-a-Service (SaaS), there is a new paradigm where simulation software is used in the form of services. Indeed, such evolutions have been more significantly seen in the business world with Information Technology solutions moving to the SaaS paradigm~\cite{sharif2010s}. So, Simulation Software-as-a-Service (SimSaaS) is very beneficial to better exploit the huge amount of platforms and storage that simulation needs \textit{per se} - and Cloud Computing is able to provide such resources. This way, researchers do not need to have the simulation software installed on their own computers or access servers which host this kind of software. Besides, they have new computing environments and methodologies for software development over the Internet. 
+With the recent evolutions in Cloud Computing and Software-as-a-Service (SaaS), there is a new paradigm where simulation software is used in the form of services. Indeed, such evolutions have been more significantly seen in the business world with Information Technology solutions moving to the SaaS paradigm~\cite{sharif2010s}. So, Simulation Software-as-a-Service (SimSaaS) is very beneficial to better exploit the huge amount of platforms and storage that simulation needs per se - and Cloud Computing is able to provide such resources. This way, researchers do not need to have the simulation software installed on their own computers or access servers which host this kind of software. Besides, they have new computing environments and methodologies for software development over the Internet.
 
 To address issues arising in this novel perspective the main goal of this paper is to propose an agent-directed transportation simulation platform, through the cloud, by means of services. It is intended to use the IEEE standard HLA (High Level Architecture) for simulators interoperability and agents for controlling and coordination. To do so, it is necessary to build the body of knowledge needed to develop such a platform. This paper's objective is to present the current state of the art in the field and, with that, also to present the general architecture of the intended platform.
 
@@ -152,7 +152,7 @@ A new trend in traffic simulation though is the nanoscopic model which extends t
 
 \subsection{Agent-directed Simulation}
 
-The introduction of \textit{intelligent demons} (called intelligent agents today) to control simulation experiments was introduced by the MISS Hungarian Center~\cite{Javor2012}. This notion of \textit{intelligent agent} may not be consensual, mainly because of the difficulty of defining what \textit{intelligence} is. However, we consider an agent as an autonomous and proactive computational entity whose rational process is based on concepts such as Knowledge, Belief, Intention, Commitment, Goal, Desire and Emotion.
+The introduction of intelligent demons (called intelligent agents today) to control simulation experiments was introduced by the MISS Hungarian Center~\cite{Javor2012}. This notion of intelligent agent may not be consensual, mainly because of the difficulty of defining what intelligence is. However, we consider an agent as an autonomous and proactive computational entity whose rational process is based on concepts such as Knowledge, Belief, Intention, Commitment, Goal, Desire and Emotion.
 
 The intelligent agent concept brings a genuine metaphor to represent autonomous entities as it is equipped with sensors and effectors as well as with reasoning and decision-making abilities. Thereby, we have entities with high-level communication skills who also provide endless possibilities for system coordination and controlling. Otherwise, system coordination and controlling would be reduced to automated scripts, which do not bring so many advantages.
 
@@ -163,12 +163,9 @@ The agent-oriented paradigm has a panoply of associated concepts, being importan
 
 The agent metaphor encompasses some other concepts, that~\cite{yilmaz2007agent} unify in the Agent-Directed Simulation paradigm. The authors indicate that the paradigm consists of three distinct, yet related areas that can be grouped under two categories: Simulation for Agents (agent simulation) and Agents for Simulation. The first is about simulation of systems that can be modelled by agents, that is, the simulation model is an agent or, in other words, we are simulating agent systems. The latter can still be grouped under two categories, namely agent-based simulation and agent-supported simulation, as follows.
 
-\begin{compactitem}
-  \item \textbf{Agent-based simulation} is the use of agent technology to generate model behaviour or to monitor generation of model behaviour. The perception feature of agents makes them pertinent for monitoring tasks. Agent-based simulation is useful for having complex experiments and deliberative knowledge processing such as planning, deciding, and reasoning.
-  \item \textbf{Agent-supported simulation} deals with the use of agents as a support facility to enable computer assistance by enhancing cognitive capabilities in problem specification and solving. Hence, agent-supported simulation involves the use of intelligent agents to improve simulation.
-\end{compactitem}
 
-A lot of researchers do not take into account the contribution of agents to simulation. Thus, in such cases \textit{agent simulation} and \textit{agent-based simulation} are seen as the same principle. In this work, it is adopted the same perspective in which the two principles are seen indistinguishably. 
+
+A lot of researchers do not take into account the contribution of agents to simulation. Thus, in such cases agent simulation and agent-based simulation are seen as the same principle. In this work, it is adopted the same perspective in which the two principles are seen indistinguishably.
 
 \subsection{HLA}
 
@@ -184,8 +181,8 @@ The Framework and Rules of HLA are the set of rules which must be obeyed in orde
 
 The OMT describes the format and syntax of the data exchanged among federates. Thus, it defines the object template data that all simulation unit needs to use in order to exchange data with each other~\cite{ieee2010hlaOMT}.
 
-Figure \ref{fig:hla_macedo} depicts all referred concepts instantiated for the work described in~\cite{macedo2013intelligent}. In this work it was presented a distributed architecture for electric bus powertrain simulation within a realistic urban mobility context. There, the communication between \textit{Federate A} ambassador and SUMO simulator~\cite{behrisch2011sumo} is performed through SUMO's API, TraCI. In this sense, whenever simulation data is required, the RTI ambassador performs calls to federate ambassador that communicate with SUMO through TraCI.
-In a similar way, the communication between \textit{Federate B} ambassador and Simulink~\cite{perrotta2012potential} model is performed through MATLAB, the Simulink's API.
+Figure \ref{fig:hla_macedo} depicts all referred concepts instantiated for the work described in~\cite{macedo2013intelligent}. In this work it was presented a distributed architecture for electric bus powertrain simulation within a realistic urban mobility context. There, the communication between Federate A ambassador and SUMO simulator~\cite{behrisch2011sumo} is performed through SUMO's API, TraCI. In this sense, whenever simulation data is required, the RTI ambassador performs calls to federate ambassador that communicate with SUMO through TraCI.
+In a similar way, the communication between Federate B ambassador and Simulink~\cite{perrotta2012potential} model is performed through MATLAB, the Simulink's API.
 
 \begin{figure}[!ht]
 \centering
@@ -202,7 +199,7 @@ Consequently, Cloud Computing has become another buzzword and more and more work
 
 Despite this vision, it is possible to differentiate cloud computing from grid computing. In this research, we adopt the definition of Cloud Computing provided by The National Institute of Standards and Technology~\cite{mell2011nist}, as it is an Institute responsible for standards and we did not see until now any other standard definition:
 
-\textit{Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.}
+Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.
 
 As also shown in~\cite{armbrust2010view}, there are three aspects that are new in cloud computing: (1)~the appearance of infinite computing resources available on demand, (2)~the elimination of an up-front commitment by cloud users, and (3)~the ability to pay for the use of computing resources on a short-term basis as needed.
 
@@ -215,7 +212,7 @@ Cloud Computing is a fresh and on-going hot topic not only for the industry but 
 
 Simulation Software-as-a-service (SimSaaS) is a relatively new paradigm where simulation software is used in the form of services. Thanks to the significant attention on the Cloud computing paradigm and taking advantage of the several resources provided, it is possible to set simulations into the cloud. This way, it is possible to offer simulations through the cloud by means of services. 
 
-In our research, it turned clearly evident that SimSaaS is a very recent topic. Just five papers are prior to 2011 and the first three do not specifically use the term SimSaaS, vaguely mentioning \textit{simulation} and \textit{web}. Besides, there is an increase number of work over the years.
+In our research, it turned clearly evident that SimSaaS is a very recent topic. Just five papers are prior to 2011 and the first three do not specifically use the term SimSaaS, vaguely mentioning simulation and web. Besides, there is an increase number of work over the years.
 
 Although the amount of papers found about SimSaaS is not quite big, it is wide in which concerns application domains. For example, in the biomedical domain there is a system devoted to simulations of electromagnetic field inside the human body~\cite{Sawicki20121190}. In crowd and pedestrian M\&S there is also one work proposing a method based on a distributed architecture with simulation in the cloud, with the authors indicating that there is a lack of automation and integration of tools for crowd M\&S~\cite{Wang:2015:SSM:2723553.2723554}. As~\cite{Sliman2013611} suggest, research dissemination methods suffer from a major drawback as they do not allow publishing simulation code and scripts along with the published papers. So, the authors demonstrate an ongoing project in which scientists can openly share their underlying code and data.
 
@@ -240,23 +237,19 @@ While specifically discussing SimSaaS, there is almost no clearly references abo
 
 A first approach can be seen in~\cite{Xie:2005:SPH:1069810.1070184}. In this paper, the authors propose a framework to extend the HLA to support Grid-wide distributed simulation. Here, a remote proxy acts on behalf of the federate in interacting with the RTI. It hides the heterogeneity of the simulators, simulators' execution platforms, and how the simulators communicate with the RTI.
 
-In a work done by~\cite{Bocciarelli:2013:SAF:2675983.2676156}, it is introduced \textit{HLAcloud}, a model-driven and cloud-based framework to support both the implementation of a Distributed simulation system from a SysML (Systems Modelling Language dialect of UML) specification of the system under study and its execution over a public cloud infrastructure. 
+In a work done by~\cite{Bocciarelli:2013:SAF:2675983.2676156}, it is introduced HLAcloud, a model-driven and cloud-based framework to support both the implementation of a Distributed simulation system from a SysML (Systems Modelling Language dialect of UML) specification of the system under study and its execution over a public cloud infrastructure.
 
 Maybe, the most relevant paper found is the one that presents a possible way for HLA to be integrated with a Service Oriented Architecture (SOA) in the context of a smart building project~\cite{Dragoicea:2012:IHS:2310096.2310200}. The paper discusses the design of an HLA federate for the inclusion of a service oriented smart building controller in the simulation loop. It is important to refer that the Simulation Manager module is a service wrapper on top of the RTI that exposes access to the RTI's federation management via a RESTful API. It deals with the creation, initialisation, deletion, starting, stopping, and execution of simulations.
 
 Still in that paper, the authors cite~\cite{Wang:2008:SHL:2367656.2367672} who presented a comparison between HLA and SOA concluding that:
-\begin{compactitem}
-\item HLA has good interoperability, synchronisation and effective and uniform information exchange mechanism between the communicating components (federates), but lacks several features of web services, such as the integration of heterogeneous resources, web-wide accessibility across firewall boundaries;
-\item SOA benefits from loose coupling, component reuse and scalability but lacks a uniform data exchange format and time synchronisation mechanisms;
-\item The combination of HLA and SOA can extend the capabilities of the two technologies and thus enable integrated simulated and real services.
-\end{compactitem}
+
 
 \subsection{Agent-directed Simulation-as-a-service}
 Agent-directed simulation and, more specifically, agent-supported simulation is used in a huge variety of fields. Nevertheless, in the field of Simulation-as-a-service, just a few examples exist, and even fewer concern the cloud.
 
 Albeit there is such a lack of work regarding agents and cloud, work such as~\cite{Yilmaz01092006} already mentioned the importance of agents to simulation (even in gaming) by exploring the relationship of software agents with simulation and games.
 
-An agent-supported simulation is seen in~\cite{Guo:2012:TGE:2346616.2346654}, where \textit{handling agents} were used for composition of simulation services with different time and event granularity. In this case, the composition consisted of wildfire and weather simulation services, but no cloud was used.
+An agent-supported simulation is seen in~\cite{Guo:2012:TGE:2346616.2346654}, where handling agents were used for composition of simulation services with different time and event granularity. In this case, the composition consisted of wildfire and weather simulation services, but no cloud was used.
 
 Elsewhere~\cite{Tolk:2010:UFA:2433508.2433550}~and~\cite{Tolk:2011:MTI:2431518.2431551} suggest that most current simulation interoperability standards are insufficient as they focus exclusively on information exchange to support the federation of solutions without providing the necessary introspection. HLA is a bit more flexible, as the information to be exchanged itself is not standardised (it only says how to structure the data), but the focus remains on information that can be exchanged with a system. So, the formal approach to simulation interoperability (using agent-supported simulation) tries to solve this problem.
 
@@ -279,7 +272,7 @@ Summing up, it is possible to see lots of gaps in the literature concerning SimS
 
 \section{A seamlessly integrated transportation simulation platform}
 
-According to the gaps previously found in the literature review, we propose an integrated transportation simulation platform regarding every term (SimSaaS, HLA and Agent-directed simulation), as it will offer simulation in the form of services, using HLA for interoperability of simulators and agents for collaboration. The general architecture of such platform will be similar to the one described in Figure \ref{fig:csim_arch}. The main differences to such architecture is that it will be adapted in order to support HLA in the \textit{Virtual Resources} tier and Agents in the \textit{Cloud Management} tier. Figure~\ref{fig:general_arch} shows the generic architecture of the proposed platform considering the three main tiers that differ from the generic cloud simulation.
+According to the gaps previously found in the literature review, we propose an integrated transportation simulation platform regarding every term (SimSaaS, HLA and Agent-directed simulation), as it will offer simulation in the form of services, using HLA for interoperability of simulators and agents for collaboration. The general architecture of such platform will be similar to the one described in Figure \ref{fig:csim_arch}. The main differences to such architecture is that it will be adapted in order to support HLA in the Virtual Resources tier and Agents in the Cloud Management tier. Figure~\ref{fig:general_arch} shows the generic architecture of the proposed platform considering the three main tiers that differ from the generic cloud simulation.
 
 \begin{figure}[h!]
 \centering
