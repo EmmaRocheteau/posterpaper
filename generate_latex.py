@@ -1,6 +1,6 @@
-def generate_latex(poster):
+def generate_latex(poster, filepath):
 
-    f = open('poster_tex.txt','w+')
+    f = open(filepath,'w+')
     g = open('poster_preamble.txt', 'r')
     h = open('logos.txt', 'r')
 
@@ -32,9 +32,9 @@ def generate_latex(poster):
 
             #Indicate which box it lies beneath (if not the first box)
             if j == 1:
-                f.write(",below=section" + poster.column[i].box[0].reference)
+                f.write(",below=" + poster.column[i].box[0].reference)
             elif j == 2:
-                f.write(",below=section" + poster.column[i].box[1].reference)
+                f.write(",below=" + poster.column[i].box[1].reference)
 
             #Fill the box to the bottom of the page if it is the last box in the column
             if j == len(poster.columns[i].boxes):
