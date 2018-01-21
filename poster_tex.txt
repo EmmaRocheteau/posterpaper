@@ -1,6 +1,4 @@
 % --------------------------------------------------------------------------- %
-% Poster for the ECCS 2011 Conference about Elementary Dynamic Networks.      %
-% --------------------------------------------------------------------------- %
 % Created with Brian Amberg's LaTeX Poster Template. Please refer for the     %
 % attached README.md file for the details how to compile with `pdflatex`.     %
 % --------------------------------------------------------------------------- %

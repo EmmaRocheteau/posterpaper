@@ -1,6 +1,7 @@
 from doc_parse import *
 import ranking
-
+from generate_latex import *
+from poster_layout import *
 
 src = "paper2/2015mt-its.tex"
 # Create object model of the document
@@ -11,7 +12,7 @@ ranking.rankFigures(doc)
 ranking.rankSections(doc)
 
 # Decide the layout of the poster
-
+poster = Poster(doc)
 
 # Summarise sections
 
