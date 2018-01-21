@@ -88,11 +88,17 @@ class Poster:
             for i in range(count - 1):
                 self.columns[1].boxes.append([i + self.columns[0].number_of_boxes])
                 self.columns[1].column_size = size_one_before
+        self.columns[1].number_of_boxes = len(self.columns[1].boxes)
 
         #Add correct number of boxes to third column
         box_number = self.columns[0].number_of_boxes + self.columns[1].number_of_boxes
-        count = 0
-        size_one_before = 0
+        self.columns[2].column_size = len(self.boxes) - box_number
+        print(box_number)
+        while box_number < len(self.boxes):
+            self.columns[2].boxes.append(self.boxes[box_number])
+            box_number += 1
+
+        '''
         while self.columns[2].cumulative_size < 632:
             size_one_before = self.columns[2].cumulative_size
             self.columns[2].cumulative_size += self.boxes[box_number].total_size
@@ -107,7 +113,11 @@ class Poster:
             for i in range(count - 1):
                 self.columns[2].boxes.append([i + self.columns[0].number_of_boxes + self.columns[1].number_of_boxes])
                 self.columns[2].column_size = size_one_before
+        self.columns[1].number_of_boxes = len(self.columns[2].boxes)
+        
+        '''
         return
+
 
 
 class Column:
