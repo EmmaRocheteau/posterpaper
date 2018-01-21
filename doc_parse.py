@@ -15,6 +15,8 @@ class Document:
         self._parseSource()
         for sec in self.sections:
             sec.parse()
+            for fig in sec.figures:
+                fig.parse()
             for subsec in sec.subsections:
                 subsec.parse()
                 for fig in subsec.figures:
@@ -65,6 +67,11 @@ class Document:
                     start = line.find("~\\cite{")
                     end = line.find("}", start)
                     line = line[0:start] + line[end+1:]
+                # Remove citations like this: \cite{robinson2008conceptual}
+                while line.find("\\cite{") != -1:
+                    start = line.find("\\cite{")
+                    end = line.find("}", start)
+                    line = line[0:start] + line[end + 1:]
                 # Write the cleaned up line to the file
                 fout.write(line)
         fin.close()
@@ -143,6 +150,7 @@ class Section:
                     fig.content += lines[i]
                     i += 1
                 self.figures.append(fig)
+                i += 1  # Get over the end figure line
             else:
                 # Some other \ like \item or whatever. Just copy them in...
                 self.content += lines[i]
@@ -185,6 +193,7 @@ class Subsection:
                     fig.content += lines[i]
                     i += 1
                 self.figures.append(fig)
+                i += 1   # get over the end figure line
             else:
                 # Some other \ like \item or whatever. Just copy them in...
                 self.content += lines[i]
@@ -201,6 +210,8 @@ class Figure:
         self.label = ""
         self.height = 1     # Multiples of width e.g. 0.5 => half as high as it is wide
         self.include = True
+        self.ref_count = 0
+        self.char_count = 0
         return
 
     def parse(self):
@@ -223,4 +234,5 @@ class Figure:
         im = Image.open("paper2/imgs/" + self.image_path)
         w, h = im.size  # (width,height) tuple
         self.height = h/w
+        self.char_count = len(self.caption)
         return

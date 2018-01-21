@@ -66,7 +66,7 @@ There are several ways to model traffic depending on the level of detail in whic
 Macroscopic models describe traffic in terms of flows (the number of vehicles that pass through a certain road per hour) or densities, without considering their entities such as vehicles. Therefore, these models are good to analyse large or complex networks.
 Unlikely macroscopic models, microscopic models detail both the behaviour of each entity and their interactions, with each other as well as with the network. For that, these models incorporate vehicle behaviour rules such as acceleration, breaking, lane changing, and so forth.
 Mesoscopic models fill the gap between macro and micro models. They normally describe traffic entities at a high level of detail, whereas their behaviour and interaction are briefly described. In these models, vehicles can be grouped in packets, which are routed throughout the network and treated as one single entity.
-A new trend in traffic simulation though is the nanoscopic model which extends the capabilities of three basic components of microscopic simulation: vehicle modelling, vehicle movement modelling, and driver behaviour modelling. For example, in the case of traffic, it intends to describe the components of a vehicle. Attempts at integrating these different perspective in a more transparent way through modelling has already been reported in the literature \cite{ferreira2008}.
+A new trend in traffic simulation though is the nanoscopic model which extends the capabilities of three basic components of microscopic simulation: vehicle modelling, vehicle movement modelling, and driver behaviour modelling. For example, in the case of traffic, it intends to describe the components of a vehicle. Attempts at integrating these different perspective in a more transparent way through modelling has already been reported in the literature .
 \subsection{Agent-directed Simulation}
 The introduction of \textit{intelligent demons} (called intelligent agents today) to control simulation experiments was introduced by the MISS Hungarian Center. This notion of \textit{intelligent agent} may not be consensual, mainly because of the difficulty of defining what \textit{intelligence} is. However, we consider an agent as an autonomous and proactive computational entity whose rational process is based on concepts such as Knowledge, Belief, Intention, Commitment, Goal, Desire and Emotion.
 The intelligent agent concept brings a genuine metaphor to represent autonomous entities as it is equipped with sensors and effectors as well as with reasoning and decision-making abilities. Thereby, we have entities with high-level communication skills who also provide endless possibilities for system coordination and controlling. Otherwise, system coordination and controlling would be reduced to automated scripts, which do not bring so many advantages.
@@ -90,7 +90,7 @@ In a similar way, the communication between \textit{Federate B} ambassador and S
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=.9\linewidth]{hla_macedo.png}
-\caption{ HLA's Functional Architecture with two different simulators \cite{macedo2013integrated}}
+\caption{ HLA's Functional Architecture with two different simulators }
 \label{fig:hla_macedo}
 \vspace{-0.9em}
 \end{figure}
@@ -100,7 +100,7 @@ Consequently, Cloud Computing has become another buzzword and more and more work
 Despite this vision, it is possible to differentiate cloud computing from grid computing. In this research, we adopt the definition of Cloud Computing provided by The National Institute of Standards and Technology, as it is an Institute responsible for standards and we did not see until now any other standard definition:
 \textit{Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.}
 As also shown in, there are three aspects that are new in cloud computing: (1)~the appearance of infinite computing resources available on demand, (2)~the elimination of an up-front commitment by cloud users, and (3)~the ability to pay for the use of computing resources on a short-term basis as needed.
-Cloud Computing is a fresh and on-going hot topic not only for the industry but also among academics. Indeed, even recently new buzzwords emerged from Cloud Computing, trying to extend it even further: Fog Computing and Cloud 2.0 are examples. For a wider state-of-the-art perspective on Cloud Computing with important research directions there are several recent sources to analyse \cite{gonzalez2015cloud} \cite{zhang2010cloud} \cite{Sun2014134} \cite{Abdelmaboud2015159} \cite{he2014state} \cite{abolfazli2015mobile}.
+Cloud Computing is a fresh and on-going hot topic not only for the industry but also among academics. Indeed, even recently new buzzwords emerged from Cloud Computing, trying to extend it even further: Fog Computing and Cloud 2.0 are examples. For a wider state-of-the-art perspective on Cloud Computing with important research directions there are several recent sources to analyse      .
 \section{Literature Review of Cloud SimSaaS}
 \subsection{SimSaaS in the Cloud}
 Simulation Software-as-a-service (SimSaaS) is a relatively new paradigm where simulation software is used in the form of services. Thanks to the significant attention on the Cloud computing paradigm and taking advantage of the several resources provided, it is possible to set simulations into the cloud. This way, it is possible to offer simulations through the cloud by means of services.
@@ -112,7 +112,7 @@ As indicate, pioneers such as Richard M.Fujimoto, Bohu Li, Gabriele D'Angelo and
 \begin{figure}[h!]
 \centering
 \includegraphics[width=.9\linewidth]{csim_arch.png}
-\caption{ The architecture of the Cloud Simulation~\protect\cite{Liu201271}}
+\caption{ The architecture of the Cloud Simulation~\protect}
 \label{fig:csim_arch}
 \vspace{-0.9em}
 \end{figure}
@@ -138,7 +138,7 @@ Already in 2004 pointed that there were limitations of existing federated simula
 \subsection{Summary}
 SimSaaS is a trendy term with high potential to grow more. However, there are problems with the term: there is a lack of automation and integration of tools in M\&S, and research dissemination methods suffer as they do not allow publishing simulation code and scripts along with the published papers. But not everything is bad! Although the amount of papers found about SimSaaS is not quite big, it is wide in what concerns application domains.
 Simulator interoperability is a very explored subject in general, but when it comes to SimSaaS, almost nothing focus on this. Indeed,, in their panel about the future of research in M\&S, authors refer to the distribution of SimSaaS in the cloud as a future research topic.
-HLA is another term referenced a lot in the literature since the first complete version (HLA 1.3) was published in 1998. However, again, there is a few works regarding extension of HLA to allow simulation services in general and in the cloud. Nevertheless, HLA solely has some disadvantages\cite{Tolk:2010:UFA:2433508.2433550}.
+HLA is another term referenced a lot in the literature since the first complete version (HLA 1.3) was published in 1998. However, again, there is a few works regarding extension of HLA to allow simulation services in general and in the cloud. Nevertheless, HLA solely has some disadvantages.
 Although cloud computing can speed up significantly agent-based M\&S to facilitate more accurate and faster results, agents are not an exception and there is an absence of work putting agents in the cloud to support SimSaaS. Nonetheless, an example was shown where it was possible to develop an agent-supported simulation to bear out SimSaaS.
 Summing up, it is possible to see lots of gaps in the literature concerning SimSaaS, SimSaaS in traffic and transportation, SimSaaS in the cloud, HLA in the cloud, solutions to HLA restrictions, agents to support SimSaaS and agents in the cloud. So, these will be the front lines of this work! Knowing that there are yet a few works regarding SimSaaS and synergies of all these gaps, this paper aims to bridge them by proposing an architecture of a transportation simulation platform in the cloud.
 \section{A seamlessly integrated transportation simulation platform}
