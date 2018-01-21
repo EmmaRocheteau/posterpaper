@@ -23,7 +23,7 @@ for i, col in enumerate(poster.columns):
         col_fig_size += box.size_without_text
     text_reduction_percent = ((DESIRED_HEIGHT - col_fig_size)/col.column_size)*100
     for j, box in enumerate(col.boxes):
-        shortened_content = summarise.summarise(box.content, box.title, int(text_reduction_percent))
+        shortened_content = summarise.summarise(box.content, box.title, int(text_reduction_percent/2))
         s = ""
         print(len(box.content))
         print(shortened_content['sentences'])
