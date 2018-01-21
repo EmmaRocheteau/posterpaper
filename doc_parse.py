@@ -82,13 +82,17 @@ class Document:
         # Title, author and preamble
         fin = open("clean.txt", "r")
         for line in fin:
-            if line.startswith("\\usepackage") or line.startswith("\\graphicspath") or \
+            if line.startswith("\\usepackage") or \
                 line.startswith("\\if") or line.startswith("\\fi") or line.startswith("\\else"):
                 self.preamble += line
             if line.startswith("\\title{"):
-                self.title += line
+                start = line.find("{")
+                end = line.rfind("}")
+                self.title += line[start+1:end]
             if line.startswith("\\author"):
-                self.author += line
+                start = line.find("{")
+                end = line.rfind("}")
+                self.author += line[start + 1:end]
         fin.close()
         return
 
@@ -205,7 +209,7 @@ class Figure:
     def __init__(self):
         self.content = ""
         self.section_name = ""
-        self.image_path = ""
+        self.image_path = "imgs/"
         self.caption = ""
         self.label = ""
         self.height = 1     # Multiples of width e.g. 0.5 => half as high as it is wide

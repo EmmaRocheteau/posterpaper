@@ -19,5 +19,5 @@ poster = Poster(doc)
 
 
 # Generate Poster to poster.tex
-generate_latex(poster, 'poster.tex')
+generate_latex(poster, 'poster2/poster.tex')
 
