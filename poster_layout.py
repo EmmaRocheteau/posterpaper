@@ -46,16 +46,72 @@ class Poster:
         for box in self.boxes:
             box.size_of_text = box.sizeOfText(self, doc, self.total_char_count, self.text_space)
             box.total_size = box.totalSize()
-        
 
-        self.columns[0].boxes.append(self.boxes[0])
+        #Add correct number of boxes to first column
+        count = 0
+        size_one_before = 0
+        while columns[0].cumulative_size < 632:
+            size_one_before = self.columns[0].cumulative_size
+            self.columns[0].cumulative_size += self.boxes[count].total_size
+            count += 1
 
+        if (self.columns[0].cumulative_size - 632) > 632 - size_one_before:
+            for i in range(count):
+                self.columns[0].boxes.append(self.boxes[i])
+                self.columns[0].column_size = self.columns[0].cumulative_size
+        else:
+            for i in range(count - 1):
+                self.columns[0].boxes.append(self.boxes[i])
+                self.columns[0].column_size = size_one_before
+
+        self.columns[0].number_of_boxes = len(self.columns[0].boxes)
+
+        #Add correct number of boxes to second column
+        box_number = self.columns[0].number_of_boxes
+        count = 0
+        size_one_before = 0
+        while columns[1].cumulative_size < 632:
+            size_one_before = self.columns[1].cumulative_size
+            self.columns[1].cumulative_size += self.boxes[box_number].total_size
+            count += 1
+            box_number += 1
+
+        if (self.columns[1].cumulative_size - 632) > 632 - size_one_before:
+            for i in range(count):
+                self.columns[1].boxes.append(self.boxes[i + self.columns[0].number_of_boxes])
+                self.columns[1].column_size = self.columns[1].cumulative_size
+        else:
+            for i in range(count - 1):
+                self.columns[1].boxes.append([i + self.columns[0].number_of_boxes])
+                self.columns[1].column_size = size_one_before
+
+        #Add correct number of boxes to third column
+        box_number = self.columns[0].number_of_boxes + self.columns[1].number_of_boxes
+        count = 0
+        size_one_before = 0
+        while columns[1].cumulative_size < 632:
+            size_one_before = self.columns[2].cumulative_size
+            self.columns[2].cumulative_size += self.boxes[box_number].total_size
+            count += 1
+            box_number += 1
+
+        if (self.columns[2].cumulative_size - 632) > 632 - size_one_before:
+            for i in range(count):
+                self.columns[2].boxes.append(self.boxes[i + self.columns[0].number_of_boxes + self.columns[1].number_of_boxes])
+                self.columns[2].column_size = self.columns[2].cumulative_size
+        else:
+            for i in range(count - 1):
+                self.columns[2].boxes.append([i + self.columns[0].number_of_boxes + self.columns[1].number_of_boxes])
+                self.columns[2].column_size = size_one_before
+        return
 
 
 class Column:
     def __init__(self):
         self.boxes = []
         self.cumulative_size = 0
+        self.column_size = 0
+        self.number_of_boxes = 0
         return
 
 class Box:
@@ -86,4 +142,3 @@ class Box:
     def totalSize(self):
         self.total_size = self.size_of_text + self.size_without_text
         return
-
