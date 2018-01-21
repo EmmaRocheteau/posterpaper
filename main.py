@@ -25,7 +25,9 @@ for i, col in enumerate(poster.columns):
     if(text_reduction_percent > 100):
         text_reduction_percent = 100
     for j, box in enumerate(col.boxes):
-        shortened_content = summarise.summarise(box.content, box.title, int(text_reduction_percent/2))
+        if i == 2 and j == 1:
+            text_reduction_percent = 300
+        shortened_content = summarise.summarise(box.content, box.title, int(text_reduction_percent/3))
         s = ""
         print(len(box.content))
         for line in shortened_content['sentences']:
