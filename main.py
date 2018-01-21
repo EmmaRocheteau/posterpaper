@@ -24,8 +24,13 @@ for i, col in enumerate(poster.columns):
     text_reduction_percent = ((DESIRED_HEIGHT - col_fig_size)/col.column_size)*100
     for j, box in enumerate(col.boxes):
         shortened_content = summarise.summarise(box.content, box.title, int(text_reduction_percent))
-        print(shortened_content['text'])
-        poster.columns[i].boxes[j].content = shortened_content['text']
+        s = ""
+        print(len(box.content))
+        print(shortened_content['sentences'])
+        for line in shortened_content['sentences']:
+            s += line + " "
+        poster.columns[i].boxes[j].content = s
+        print(len(s))
 
 # Generate Poster to poster.tex
 generate_latex(poster, 'paper2/poster.tex')
