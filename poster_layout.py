@@ -1,9 +1,9 @@
 class Poster:
     def __init__(self, doc):
         self.columns = []
-        self.author = ""
-        self.title = ""
-        self.preamble = ""
+        self.author = doc.author
+        self.title = doc.title
+        self.preamble = doc.preamble
         self.boxes = []
         self._makeBoxes(doc)
         self.total_char_count = self._charCount()
@@ -23,6 +23,8 @@ class Poster:
                 box = Box(doc)
                 box.figures = section.figures
                 box.content = section.content
+                for subsection in section.subsections:
+                    box.content += subsection.content
                 box.title = section.name
                 box.char_count = section.char_count
                 box.reference = "section" + str(i+1)

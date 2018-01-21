@@ -14,7 +14,7 @@ def generate_latex(poster, filepath):
     f.write(poster.title)
 
     #Tex bable
-    f.write("} \n %%% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n { \n \\vspace{0.4em} \n \t{\n \t")
+    f.write("} \n %%% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n { \n \\vspace{2.2em} \n \t{\small \n \t")
 
     #Insert authors
     f.write(poster.author)
