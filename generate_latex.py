@@ -4,6 +4,8 @@ def generate_latex(poster, filepath):
     g = open('poster_preamble.txt', 'r')
     h = open('logos.txt', 'r')
 
+    f.write("\documentclass[a0paper,fontscale=0.4125,landscape]{baposter} %landscape")
+
     #Add preamble from document
     f.write(poster.preamble)
 

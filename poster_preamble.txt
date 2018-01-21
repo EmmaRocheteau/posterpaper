@@ -10,7 +10,6 @@
 % $Id:: poster.tex 128 2011-09-11 08:57:12Z rlegendi                        $ %
 % --------------------------------------------------------------------------- %
 %\documentclass[apaper,fontscale=0.493,portrait]{baposter} %portrait
-\documentclass[a0paper,fontscale=0.4125,landscape]{baposter} %landscape
 \usepackage{relsize}		% For \smaller
 \usepackage{url}			% For \url
 \usepackage{epstopdf}	% Included EPS files automatically converted to PDF to include with pdflatex
