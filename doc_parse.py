@@ -235,7 +235,7 @@ class Figure:
                 self.label += line[start + 1:end]
             else:
                 continue
-        im = Image.open("paper2/imgs/" + self.image_path)
+        im = Image.open("paper2/" + self.image_path)
         w, h = im.size  # (width,height) tuple
         self.height = h/w
         self.char_count = len(self.caption)
