@@ -4,6 +4,9 @@ def generate_latex(poster):
     g = open('poster_preamble.txt', 'r')
     h = open('logos.txt', 'r')
 
+    #Add preamble from document
+    f.write(poster.preamble)
+
     #Insert preamble
     f.write(g.read())
 
@@ -19,9 +22,34 @@ def generate_latex(poster):
     #Insert logos text, can be edited in the text file
     f.write(h.read())
 
-    f.write("\headerbox{" + poster.column[i].box[j].title + "}{name=" + poster.column[i].box[j].reference + ",span")
+    #Creates each box, indicates the position of the box with respect to the others and puts the content of the box inside
+    for i in len(poster.columns):
+        for j in len(poster.columns[i].boxes):
 
-    #Add the headerbox tex stuff
-    f.write("\headerbox{Abstract}{name=abstract,span=1,column=0,row=0}\n{")
+            #Create headerbox
+            f.write("\headerbox{" + poster.column[i].box[j].title + "}{name=")
+            f.write(poster.column[i].box[j].reference + ",span=1,column=" + str(i))
 
-    f.write(poster.)
+            #Indicate which box it lies beneath (if not the first box)
+            if j == 1:
+                f.write(",below=section" + poster.column[i].box[0].reference)
+            elif j == 2:
+                f.write(",below=section" + poster.column[i].box[1].reference)
+
+            #Fill the box to the bottom of the page if it is the last box in the column
+            if j == len(poster.columns[i].boxes):
+                f.write(",above=bottom")
+
+            #Finish headerbox
+            f.write("}\n {")
+
+            #Add content
+            f.write(poster.columns[i].box[j].content)
+
+            #Add images to the section
+
+
+            #Add some new lines for prettiness
+            f.write("\n}\n\n")
+
+    f.write("\end{poster}\n\end{document}")
