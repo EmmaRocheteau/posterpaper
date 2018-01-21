@@ -63,5 +63,6 @@ def rankSections(doc):
         # Approximately what percentage of the total document is made up by this section
         perc = sec.char_count/doc.total_char_count
         if perc < 0.1:
-            doc.sections[i].include = False
+            if doc.sections[i].name != "Conclusion":
+                doc.sections[i].include = False
     return

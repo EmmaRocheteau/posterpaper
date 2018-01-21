@@ -1,10 +1,10 @@
 paper2/poster.tex
-*.bcf
-*.xml
-*.aux
-*.out
-*.synctex.gz
-*.pdf
+*/*.bcf
+*/*.xml
+*/*.aux
+*/*.out
+*/*.synctex.gz
+*/*.pdf
 paper/main.aux
 paper/main.out
 paper/main.synctex.gz
